@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% for site in sites %}
+        <p url={{ site.site }}>{{ site.sitename }}</p>
+    {% endfor %}
+{% endblock %}

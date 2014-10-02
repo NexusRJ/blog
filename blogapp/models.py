@@ -1,16 +1,21 @@
 from django.db import models
 from django.contrib import admin
+from DjangoUeditor.models import UEditorField
 
 
-class BlogPost(models.Model):
+class Archives(models.Model):
     title = models.CharField(max_length=150)
-    body = models.TextField()
+    body = UEditorField('body')
     timestamp = models.DateField()
+    archivetype = models.CharField(max_length=150, default='books')
+
     class Meta:
-        ordering = ('-timestamp', 'title')
+        ordering = ('-timestamp', 'title', 'archivetype', 'id')
 
 
-class BlogPostAdmin(admin.ModelAdmin):
-    list_display = ('title', 'timestamp')
+class ArchivesAdmin(admin.ModelAdmin):
+    list_display = ('title', 'timestamp', 'archivetype', 'body')
 
-admin.site.register(BlogPost,BlogPostAdmin)
+
+
+admin.site.register(Archives,ArchivesAdmin)

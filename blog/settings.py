@@ -73,7 +73,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'nexus6_blog',#os.path.join('/home/PycharmProjects/blog')
         'USER': 'nexus6',
-        'PASSWORD':'neus6',
+        'PASSWORD':'nexus6',
         'HOST': 'localhost',
         'PORT': '3306',
     }

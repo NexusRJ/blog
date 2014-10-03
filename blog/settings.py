@@ -74,7 +74,7 @@ DATABASES = {
         'NAME': 'nexus6_blog',#os.path.join('/home/PycharmProjects/blog')
         'USER': 'nexus6',
         'PASSWORD':'neus6',
-        'HOST': 'localhost:3306',
+        'HOST': 'localhost',
         'PORT': '3306',
     }
 }

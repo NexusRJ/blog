@@ -71,10 +71,10 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'myblog',#os.path.join('/home/PycharmProjects/blog')
-        'USER': 'root',
-        'PASSWORD':'root',
-        'HOST': '',
+        'NAME': 'nexus6_blog',#os.path.join('/home/PycharmProjects/blog')
+        'USER': 'nexus6',
+        'PASSWORD':'neus6',
+        'HOST': 'localhost:3306',
         'PORT': '3306',
     }
 }

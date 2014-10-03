@@ -4,9 +4,9 @@
     <data-source source="LOCAL" name="Django default" uuid="7da1676a-e4fe-4357-9a18-ba4e12b2c9d5">
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://:3306/myblog</jdbc-url>
-      <user-name>root</user-name>
-      <user-password>dfd8dfc5dfc5dfde</user-password>
+      <jdbc-url>jdbc:mysql://localhost:3306:3306/nexus6_blog</jdbc-url>
+      <user-name>nexus6</user-name>
+      <user-password>dfc4dfcfdfdfdfd9df9c</user-password>
       <libraries />
     </data-source>
   </component>

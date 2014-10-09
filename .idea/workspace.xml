@@ -55,10 +55,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="gunicorn.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gunicorn.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.05859375" vertical-offset="0" max-vertical-offset="512">
+              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41340783" vertical-offset="948" max-vertical-offset="1665">
+            <state vertical-scroll-proportion="0.0" vertical-offset="948" max-vertical-offset="1665">
               <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
               <folding />
             </state>
@@ -106,8 +116,8 @@
         <option value="$PROJECT_DIR$/blogapp/urls.py" />
         <option value="$PROJECT_DIR$/blogapp/views.py" />
         <option value="$PROJECT_DIR$/static/css/blog.css" />
-        <option value="$PROJECT_DIR$/gunicorn.py" />
         <option value="$PROJECT_DIR$/blog/settings.py" />
+        <option value="$PROJECT_DIR$/gunicorn.py" />
       </list>
     </option>
   </component>
@@ -898,18 +908,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gunicorn.py">
+    <entry file="file://$PROJECT_DIR$/blog/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14648438" vertical-offset="0" max-vertical-offset="512">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="948" max-vertical-offset="1665">
+          <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/settings.py">
+    <entry file="file://$PROJECT_DIR$/gunicorn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41340783" vertical-offset="948" max-vertical-offset="1665">
-          <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.05859375" vertical-offset="0" max-vertical-offset="512">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
           <folding />
         </state>
       </provider>

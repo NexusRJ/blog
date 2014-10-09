@@ -72,8 +72,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'nexus6_blog',#os.path.join('/home/PycharmProjects/blog')
-        'USER': 'nexus6',
-        'PASSWORD':'nexus6',
+        'USER': 'root',
+        'PASSWORD':'root',
         'HOST': 'localhost',
         'PORT': '3306',
     }

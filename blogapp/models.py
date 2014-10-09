@@ -10,11 +10,11 @@ class Archives(models.Model):
     archivetype = models.CharField(max_length=150, default='books')
 
     class Meta:
-        ordering = ('-timestamp', 'title', 'archivetype', 'id')
+        ordering = ('-timestamp', 'title', 'archivetype' )
 
 
 class ArchivesAdmin(admin.ModelAdmin):
-    list_display = ('title', 'timestamp', 'archivetype', 'body')
+    list_display = ('title', 'timestamp', 'archivetype','id')
 
 
 

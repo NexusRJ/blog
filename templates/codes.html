@@ -1,12 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
+    <div class="archive">
     {% for archive in archives %}
         {% if archive.archivetype == 'codes' %}
-            <h2><a class='title' href={% url 'showblog' archive.title %}> {{ archive.title }}</a></h2>
+            <h2><a class='title' href={% url 'showblog' archive.id %}> {{ archive.title }}</a></h2>
             <p class="time">{{ archive.timestamp }}</p>
-            <div class="archive">
+            <div class="archbody">
                 {{ archive.body|safe }}
             </div>
         {% endif %}
     {% endfor %}
+    </div>
 {% endblock %}

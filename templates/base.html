@@ -7,15 +7,29 @@
     <script type="text/javascript" charset="utf-8" src="/static/ueditor/third-party/SyntaxHighlighter/shCore.js"></script>
     <link rel="stylesheet" type="text/css" href="/static/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css"/>
 </head>
+
 <body>
-    <h1>Nexus6</h1>
-    <div class="base"><a href="/">首页</a><a href="/books/">读书</a><a href="/codes/">编程</a><a href="/about/">关于</a></div>
-{% block content %}
-{% endblock %}
-    <script type="text/javascript">
-        //为了在编辑器之外能展示高亮代码
-        SyntaxHighlighter.highlight();
-        UE.getEditor('myEditor');
-    </script>
+<div id="main">
+    <div id="head">
+        <img class="ava" src="/static/image/ava.jpeg"/>
+        <div id="intro">We don't need education.</div>
+        <div class="navibar">
+            <a href="/">首 页</a><a href="/books/">读 书</a><a href="/codes/">编 程</a><a href="/about/">关 于</a>
+        </div>
+    </div>
+
+    <div id="middle">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <div id="footer">
+    </div>
+</div>
+<script type="text/javascript">
+    //为了在编辑器之外能展示高亮代码
+    SyntaxHighlighter.highlight();
+   UE.getEditor('myEditor');
+</script>
 </body>
 </html>

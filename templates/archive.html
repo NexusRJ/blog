@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
 {% for archive in archives %}
+    <div class="archive">
         <h2><a class='title' href={% url 'showblog' archive.id %}> {{ archive.title }}</a></h2>
         <p class="time">{{ archive.timestamp }}</p>
-    <div class="archive">
-        {{ archive.body|safe }}
+        <div class="archbody">
+            {{ archive.body|safe }}
+        </div>
     </div>
 {% endfor %}
 {% endblock %}

@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <div class="archive">
     <h2> {{ thisblog.title }} </h2>
     <p class="time">{{ thisblog.timestamp }}</p>
-    <div class="archive">
+    <div class="archbody">
         {{ thisblog.body|safe }}
     </div>
     {%load comments%}
@@ -36,5 +37,6 @@
             </form>
             </div>
         </div>
+    </div>
     </div>
 {% endblock %}

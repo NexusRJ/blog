@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html>
-<link rel='stylesheet' href="/static/css/blog.css" type='text/css'>
+<head>
+    <title>Nexus6</title>
+    <link rel='stylesheet' href="/static/css/blog.css" type='text/css'>
+    <!--加入高亮的js和css文件，如果你的编辑器和展示也是一个页面那么高亮的js可以不加载-->
+    <script type="text/javascript" charset="utf-8" src="/static/ueditor/third-party/SyntaxHighlighter/shCore.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css"/>
+</head>
 <body>
-<h1>Nexus6</h1>
-<div class="base"><a href="/">首页</a><a href="/books/">读书</a><a href="/codes/">编程</a><a href="/about/">关于</a></div>
+    <h1>Nexus6</h1>
+    <div class="base"><a href="/">首页</a><a href="/books/">读书</a><a href="/codes/">编程</a><a href="/about/">关于</a></div>
 {% block content %}
 {% endblock %}
+    <script type="text/javascript">
+        //为了在编辑器之外能展示高亮代码
+        SyntaxHighlighter.highlight();
+        UE.getEditor('myEditor');
+    </script>
 </body>
 </html>

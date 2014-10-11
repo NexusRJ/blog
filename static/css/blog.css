@@ -1,23 +1,25 @@
 /*simple frame of the whole site*/
-body {  font-family:"Microsoft YaHei";
-        background: url("/static/image/2.jpg");
-    }
+*{
+   margin:0;
+   padding:0;
+}
+body{font-family:"Microsoft YaHei";background: url("/static/image/back.jpg")repeat-x;}
+#footer{background: url("/static/image/foot.jpg")repeat-x;height:277px;}
 #main{  width: 900px;
         border-radius: 5px;
-        margin: 1.5em auto;
+        margin: 2em auto 0em auto;
         padding-bottom: 3em;
-        background-color: #fdfdfd;
-        /*opacity: 0.8;*/
-        /*background-color: rgba(255,255,255,0.5);*/
+        background-color: #fefef5;
+        opacity: 0.9;
     }
 #head{  border-radius: 5px;
         text-align: center;
         padding: 3em 0.5em 0em 0.5em;
-        background: #fdfdfd;
+        background: #fefef5;
 }
 .ava{width: 130px;height: 130px;border-radius: 140px;}
-#intro{font-family:'arial-black';margin: 2em 0;color: #919191;}
-#middle{margin: 3em 3em 1em 3em;}
+#intro{font-family:"DejaVu Sans Light";margin: 2em 0;color: #686269;}
+#middle{margin: 2em 3em 1em 3em;}
 
 h3{
     text-indent: 0.8em;
@@ -26,26 +28,31 @@ h3{
     padding: 0.8em 0 0 0;
 }
 
-p { text-indent:2em;line-height:1.5em;margin:0;}
-ul li{line-height:1.5em;font-size: large;}
 
 /*navigation bar*/
-.navibar{text-align:center;border-bottom: 3px solid #b7b7b7;margin:3em 2em 0 2em;padding:1em 0;}
-.navibar a{font-size:large;margin:0.5em 1em 0.5em 1em  ;color: #7f7f7f;padding:0;text-decoration:none;}
-.navibar a:hover{color: #ff7d8e;}
+#navibar{border-bottom: solid 3px #c3c3c3;margin: 0 30px;}
+#navi{height:38px;margin-left: 213px;}
+#ul1{height:38px;position:relative;overflow:hidden;}
+#ul1 li{list-style: none;float:left;height:38px;line-height:38px;width:100px;text-align:center;}
+#ul1 li a{text-decoration: none;position:relative;color: #6e5569;}
+.div1{height:38px;}
+#li1 .div1{background: #fc7c8c;}
+#li2 .div1{background: #8efc8b;}
+#li3 .div1{background: #faa2d1;}
+#li4 .div1{background:#69bcf3;}
 
 /*archives on index */
 .archive{margin-bottom: 3em;
          padding-bottom: 3em;
-         border-bottom: 1px solid #cbcbcb;
+         border-bottom: 1px solid #d5d5d5;
         }
-.archive a{text-decoration: none;color: #c7bbb9}
+.archive a{text-decoration: none;color: #b9adab}
 .archive a:hover{color: #fc7c8c;}
 h2 {    font-size:1.7em;
-        color: #c7bbb9;
+        color: #928684;
         margin-top: 0em
     }
-.time{text-indent:0em;font-size: small;}
+.time{text-indent:0em;font-size: small;margin-top: 0.8em;}
 .archbody{margin: 2em 3em 0 1em}
 .title{font-size:1em;color: #b7b7b7;padding:0;text-decoration:none;}
 
@@ -60,3 +67,36 @@ h2 {    font-size:1.7em;
 .commentfooter{}
 .commentname{font-size: large;}
 .commentarea{font-size: large;margin-top:2em;}
+
+/*scroll to the top*/
+#tbox{width:47px; height:73px; float:right; position:fixed;
+_position:absolute;
+_bottom:auto;
+_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+_margin-bottom:10px;
+}
+#jianyi{ color: #606060;text-decoration: none;width:47px; height:25px; background-color: #dcdcdc;position:absolute; bottom:0px; cursor:pointer;text-align: center;line-height:25px;font-size: small;}
+#gotop{ width:47px; height:47px; background:url("/static/image/top01.png") no-repeat; position:absolute; top:0px; display:none; cursor:pointer}
+#jianyi:hover{ color: #ff932e;background-color: #ffe7b8;}
+#gotop:hover{ background:url("/static/image/top02.png") no-repeat;}
+
+/*about page*/
+#aboutme{margin: 4em 1em 2em 2em;
+}
+#myname{background-color: #f2e8ff;
+        border-radius: 6px;
+        font-size: large;
+        line-height: 2em;
+        padding:1.5em 2em 1.5em 2em ;
+        margin-bottom: 2em ;
+}
+#touchme{background-color: #fbf4ff;
+        border-radius: 6px;
+        line-height: 1.5em;
+        padding:1.5em 2em 1.5em 3em ;
+        margin-bottom: 2em ;
+}
+#touchme a{ color: #796084;
+            text-decoration: none;
+            margin-left: 1em;
+}

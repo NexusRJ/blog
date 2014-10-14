@@ -27,7 +27,7 @@ class Comments(models.Model):
 
 
 class ArchivesAdmin(admin.ModelAdmin):
-    list_display = ('title', 'timestamp', 'archivetype', 'body')
+    list_display = ('title', 'timestamp', 'archivetype')
 
 
 class CommentsAdmin(admin.ModelAdmin):

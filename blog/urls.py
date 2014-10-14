@@ -8,6 +8,5 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^admin/', include(admin.site.urls)),
     url(r'^ueditor/',include('DjangoUeditor.urls' )),
-    url(r'^comments/', include('django.contrib.comments.urls')),
     url(r'^', include('blogapp.urls')),
 )

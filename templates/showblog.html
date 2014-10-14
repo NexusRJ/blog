@@ -2,41 +2,32 @@
 
 {% block content %}
     <div class="archive">
-    <h2> {{ thisblog.title }} </h2>
-    <p class="time">{{ thisblog.timestamp }}</p>
-    <div class="archbody">
-        {{ thisblog.body|safe }}
-    </div>
-    {%load comments%}
-    {%get_comment_list for thisblog as comment_list%}
-    <div class="commentext">
-        <h3>评论:</h3>
-        {%for comment in comment_list%}
-        <div class="commentdate">{{comment.submit_date}}</div>
-        <div class="commentbody">{{comment.user_name}} 说: {{comment.comment|safe}}</div>
-
-        {% endfor %}
-        <div id=’commentform’>
-            {%get_comment_form for post as form%}
-            <div calss="commentfooter">
-            <form action='{%comment_form_target%}' method='post'>
-            {% csrf_token %}
-            {{form.object_pk}}
-            {{form.content_type}}
-            {{form.timestamp}}
-            {{form.security_hash}}
-
-            <p class="commentname"><label for="id_name">姓名（必填）：</label><input name="name" id="id_name"></p>
-            <p class="commentname"><label for="id_email">邮箱（必填）：</label><input name="email" id="id_email"></p>
-            <p class="commentname"><label for="id_url">网站（可选）：</label><input name="url" id="id_url"></p>
-            <p class="commentarea"><label for="id_comment">评论（必填）：</label></p>
-            <p class="commentname"><textarea id="id_comment"  rows="10" cols="36" name="comment"></textarea></p>
-            <p style="display:none;"><label for="id_honeypot">如果你在该字段中输入任何内容，那么你的评论就会被视为垃圾评论。</label> <input type="text" name="honeypot" id="id_honeypot"></p>
-            <p class="commentname"><input name="post" value="发表" type="submit" /></p>
-            <input type='hidden' name='next' value='{% url 'showblog' archive.title %}'/>
-            </form>
-            </div>
+        <h2> {{ thisblog.title }} </h2>
+        <p class="time">{{ thisblog.timestamp }}</p>
+        <div class="archbody">
+            {{ thisblog.body|safe }}
         </div>
     </div>
+    <div class="comment">
+        评论：
+        <div class="showcomment">
+
+            {% for i in thiscomment %}
+                <div class="onecomment">
+                <div class="commbody">{{ i.content }}</div>
+                <div class="comminfo"><span class="commauthor">来自: {{ i.author }}</span><span class="commtime">{{ i.time }}</span></div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="commform">
+        <form name='thiscomment' action="/comment?id={{ thisblog.id }}" method="post">
+            {% csrf_token %}
+            添加评论：<div class="formcont"><textarea type="text" name="content" wrap="virtual"></textarea></div>
+            <span class="forminfo">姓名：<input name="author"value="姓名，必填" onFocus="if(value==defaultValue){value='';this.style.color='#000'}" onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999"></span>
+            <span class="forminfo">email：<input name="email"value="email，必填" onFocus="if(value==defaultValue){value='';this.style.color='#000'}" onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999"></span>
+            <span class="forminfo">link:<input name="link"value="个人站点，可不填" onFocus="if(value==defaultValue){value='';this.style.color='#000'}" onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999"></span>
+            <div class="formbtn"><input type="reset" name="reset" value="重置"><input type="submit" name="submit" value="提交"></div>
+        </form>
+        </div>
     </div>
 {% endblock %}

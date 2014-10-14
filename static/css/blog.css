@@ -9,7 +9,7 @@ body{font-family:"Microsoft YaHei";background: url("/static/image/back.jpg")repe
         border-radius: 5px;
         margin: 2em auto 0em auto;
         padding-bottom: 3em;
-        background-color: #fefef5;
+        background-color: #fdfdf4;
         opacity: 0.9;
     }
 #head{  border-radius: 5px;
@@ -42,9 +42,10 @@ h3{
 #li4 .div1{background:#69bcf3;}
 
 /*archives on index */
-.archive{margin-bottom: 3em;
-         padding-bottom: 3em;
+.archive{margin-bottom: 4em;
+         padding-bottom: 5em;
          border-bottom: 1px solid #d5d5d5;
+         color: #4e0001;
         }
 .archive a{text-decoration: none;color: #b9adab}
 .archive a:hover{color: #fc7c8c;}
@@ -52,33 +53,9 @@ h2 {    font-size:1.7em;
         color: #928684;
         margin-top: 0em
     }
-.time{text-indent:0em;font-size: small;margin-top: 0.8em;}
+.time{text-indent:0em;font-size: small;margin-top: 0.8em;color:#69bcf3;}
 .archbody{margin: 2em 3em 0 1em}
 .title{font-size:1em;color: #b7b7b7;padding:0;text-decoration:none;}
-
-/*comments*/
-.commentdate{
-    font-size:x-small;
-    border-bottom: 1px solid #dcdcdc;
-    margin: 0.5em 3em 0.5em 3em;
-}
-.commentbody{color: #cfcfcf;text-indent:2em;line-height: 1.5em;margin: 1em 0 1em 0;}
-.commentext{background: #f4f4f4;padding-bottom:2em;margin-top: 5em;}
-.commentfooter{}
-.commentname{font-size: large;}
-.commentarea{font-size: large;margin-top:2em;}
-
-/*scroll to the top*/
-#tbox{width:47px; height:73px; float:right; position:fixed;
-_position:absolute;
-_bottom:auto;
-_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
-_margin-bottom:10px;
-}
-#jianyi{ color: #606060;text-decoration: none;width:47px; height:25px; background-color: #dcdcdc;position:absolute; bottom:0px; cursor:pointer;text-align: center;line-height:25px;font-size: small;}
-#gotop{ width:47px; height:47px; background:url("/static/image/top01.png") no-repeat; position:absolute; top:0px; display:none; cursor:pointer}
-#jianyi:hover{ color: #ff932e;background-color: #ffe7b8;}
-#gotop:hover{ background:url("/static/image/top02.png") no-repeat;}
 
 /*about page*/
 #aboutme{margin: 4em 1em 2em 2em;
@@ -100,3 +77,56 @@ _margin-bottom:10px;
             text-decoration: none;
             margin-left: 1em;
 }
+
+/*scroll to the top*/
+#tbox{width:47px; height:73px; float:right; position:fixed;
+_position:absolute;
+_bottom:auto;
+_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+_margin-bottom:10px;
+}
+#jianyi{ border-radius: 5px;color: #606060;text-decoration: none;width:47px; height:25px; background-color: #dcdcdc;position:absolute; bottom:0px; cursor:pointer;text-align: center;line-height:25px;font-size: small;}
+#gotop{ width:47px; height:47px; background:url("/static/image/top01.png") no-repeat; position:absolute; top:0px; display:none; cursor:pointer}
+#jianyi:hover{ color: #ff932e;background-color: #ffe7b8;}
+#gotop:hover{ background:url("/static/image/top02.png") no-repeat;}
+
+/*pageinator*/
+.pageinator{float: right;}
+.pagebtn{ float: left;
+          border:solid 1px #dddddd;
+          border-radius: 5px;
+          padding: 3px 10px;
+          background-color: #f4f4f4;
+          font-size: small;
+}
+.pagebtn:hover{background-color: #8dfcff
+}
+.pagebtn a{text-decoration: none;color: #5e5e5e
+}
+.pagestatus{float: left;
+            width: 50px;
+            text-align: center;
+            padding: 2px 5px;}
+
+/*comments*/
+.comment{background-color: #faf9fc;
+         border-radius: 10px;
+         padding: 2em;
+         color: #656565; ;
+}
+.showcomment{margin: 2em;}
+.onecomment{margin: 1em 0 2em 0;}
+.commbody{text-indent:2em;margin: 1em 0 2em 0;color: #740008;line-height: 1.5em;}
+.comminfo{font-size:small;padding-bottom:2px;text-align: right;border-bottom:1px dotted #dddce4;}
+.commtime{font-size: x-small;color: #faa2d1;
+}
+.commauthor{float: left;color: #faa2d1;
+}
+
+.commform{margin:5em 0;}
+.formcont{}
+.formcont textarea{margin:1em 0;resize: none;width: 720px;height: 150px;}
+.forminfo{margin:0 1em 0 0;}
+.commform input{width: 12em;height:1.5em ;}
+.formbtn{margin: 1em 1em;}
+.formbtn input{width: 6em;height: 2em;margin-left:1em;float: right}

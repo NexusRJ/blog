@@ -1,11 +1,35 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from blogapp.models import Archives, Comments
+#How many archives must a page show?
+onepage = 4
 
 
 def archive(request):
-    archives = Archives.objects.all()
-    return render(request, 'archive.html', {'archives': archives,})
+    #pageinator
+    try:
+        curpage = int(request.GET.get('curPage', 1))
+        allpage = int(request.GET.get('allPage', 1))
+        pagetype = str(request.GET.get('pageType', ''))
+    except ValueError:
+        curpage = 1
+        allpage = 1
+        pagetype = ''
+    #just calculate once when first connect db
+    if curpage == 1 and allpage == 1:
+        allpagecounts = Archives.objects.count()
+        allpage = allpagecounts/onepage
+        remainpages = allpagecounts % onepage
+        if remainpages > 0:
+            allpage += 1
+    if pagetype == 'pageUp':
+        curpage -= 1
+    elif pagetype == 'pageDown':
+        curpage += 1
+    startpage = (curpage-1) * onepage
+    endpage = startpage + onepage
+    archives = Archives.objects.all()[startpage:endpage]
+    return render(request, 'archive.html', {'archives': archives, 'curPage': curpage, 'allPage': allpage})
 
 
 def showblog(request, name):

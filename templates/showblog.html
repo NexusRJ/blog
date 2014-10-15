@@ -5,7 +5,7 @@
         <h2> {{ thisblog.title }} </h2>
         <p class="time">{{ thisblog.timestamp }}</p>
         <div class="archbody">
-            {{ thisblog.body|safe }}
+            {{ thisblog.content|safe }}
         </div>
     </div>
     <div class="comment">

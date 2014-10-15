@@ -5,7 +5,7 @@
         <h2><a class='title' href={% url 'showblog' archive.id %}> {{ archive.title }}</a></h2>
         <p class="time">{{ archive.timestamp }}</p>
         <div class="archbody">
-            {{ archive.body|safe }}
+            {{ archive.content|safe }}
         </div>
     </div>
 {% endfor %}

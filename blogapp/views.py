@@ -2,7 +2,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from blogapp.models import Archives, Comments
 #How many archives must a page show?
-onepage = 4
+onepage = 3
 
 
 def archive(request):
@@ -34,7 +34,8 @@ def archive(request):
 
 def showblog(request, name):
     thisblog = Archives.objects.get(id=name)
-    return render(request, 'showblog.html', {'thisblog': thisblog,})
+    thiscomment = thisblog.comments_set.all()
+    return render(request, 'showblog.html', {'thisblog': thisblog, 'thiscomment': thiscomment,})
 
 
 def books(request):

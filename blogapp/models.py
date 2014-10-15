@@ -5,7 +5,7 @@ from DjangoUeditor.models import UEditorField
 
 class Archives(models.Model):
     title = models.CharField(max_length=150)
-    body = UEditorField('body')
+    content = UEditorField()
     timestamp = models.DateField()
     archivetype = models.CharField(max_length=150, default='books')
 

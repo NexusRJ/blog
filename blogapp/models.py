@@ -27,11 +27,11 @@ class Comments(models.Model):
 
 
 class ArchivesAdmin(admin.ModelAdmin):
-    list_display = ('title', 'timestamp', 'archivetype')
+    list_display = ('title', 'id', 'timestamp', 'archivetype')
 
 
 class CommentsAdmin(admin.ModelAdmin):
-    list_display = ('id', 'content', 'author', 'archivetitle')
+    list_display = ('archivetitle','id', 'content', 'author')
 
 admin.site.register(Archives,ArchivesAdmin)
 admin.site.register(Comments,CommentsAdmin)

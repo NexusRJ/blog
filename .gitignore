@@ -45,3 +45,5 @@ docs/_build/
 target/
 #Back file
 *~
+#gunicorn log
+*nohup.out
